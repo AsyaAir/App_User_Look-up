@@ -2,11 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { getUserData } from "@/lib/api";
+import styles from "@/styles/UserCard.module.css"; // Импорт CSS модуля
 
 interface User {
     id: number;
     name: string;
     email: string;
+    company: {
+        name: string;
+    };
 }
 
 export default function UserCard({ userId }: { userId: number }) {
@@ -19,9 +23,19 @@ export default function UserCard({ userId }: { userId: number }) {
     if (!user) return <p>Loading...</p>;
 
     return (
-        <div className="p-4 border rounded-xl shadow-md">
-        <h2 className="text-xl font-bold">{user.name}</h2>
-        <p className="text-gray-600">{user.email}</p>
+        <div className={styles.userCard}>
+        <div className={styles.userCardHeader}>
+            <h2 className={styles.userName}>{user.name}</h2>
+            <p className={styles.userEmail}>{user.email}</p>
+        </div>
+        <div className={styles.userCardContent}>
+            <p className={styles.userCompany}>Company: {user.company.name}</p>
+        </div>
+        <div className={styles.userCardFooter}>
+            <a href={`/user/${user.id}`} className={styles.viewDetailsLink}>
+            View Details
+            </a>
+        </div>
         </div>
     );
 }

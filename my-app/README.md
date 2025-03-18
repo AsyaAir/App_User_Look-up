@@ -1,3 +1,30 @@
+1. npm run dev
+2. http://localhost:3000/user/1
+
+3. npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+   nano ~/.bash_profile
+   export PATH=$PATH:/Users/anastasiatulupnikoff/.npm-global/bin
+   source ~/.bash_profile
+
+4. https://github.com/tailwindcss-ru/tailwindcss.ru/issues/new
+   Issue with Installing and Using TailwindCSS on macOS - Command Not Found
+
+Hello,
+
+I am facing an issue with installing and using TailwindCSS on my macOS machine. I have followed the steps outlined in the official documentation and tried different approaches, but I keep encountering errors. Here’s a summary of my issue: 1. Initial Setup and Installation:
+• I tried installing TailwindCSS globally using npm install -g tailwindcss and locally using npm install tailwindcss --save-dev.
+• I have attempted to initialize the TailwindCSS configuration file using npx tailwindcss init -p, but I keep getting the error: bash: tailwindcss: command not found. 2. System Configuration:
+• I checked the global npm prefix using npm config get prefix and confirmed it is set to /Users/anastasiatulupnikoff/.npm-global.
+• I updated my ~/.bash_profile file to include the npm global bin directory in my PATH (export PATH=$PATH:/Users/anastasiatulupnikoff/.npm-global/bin).
+• After modifying .bash_profile, I ran source ~/.bash_profile and restarted the terminal, but the issue persists. 3. Attempts to Fix:
+• I reinstalled tailwindcss both globally and locally in the project directory.
+• I verified that the necessary files are installed in node_modules/.bin but still couldn’t run the tailwindcss command.
+• I also tried running the command directly from ./node_modules/.bin/tailwindcss init -p, but the terminal reports No such file or directory.
+
+Could you please assist me in resolving this issue? Any help would be greatly appreciated!
+
+Thank you in advance!
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
